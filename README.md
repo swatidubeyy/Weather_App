@@ -1,27 +1,57 @@
-# WeatherApp
+##Weather Application
+This Angular application displays weather information including the current location's temperature, date and time, humidity, and wind speed by default. Users can search for weather data for other locations. The app also features a toggle for dark mode.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.
+##Features
+Current Location Weather: Automatically displays weather data for the user's current location.
+Search Functionality: Users can search for weather information by entering a city name or zip code.
+Dark Mode: Toggle between light and dark mode.
 
-## Development server
+##Weather Details: Displays temperature, date and time, humidity, wind speed, and weather condition.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+##Technologies Used: Angular, TypeScript, HTML, CSS, OpenWeather API, Prerequisites Node.js, Angular CLI.
 
-## Code scaffolding
+##Approach --> 
+Component-Based Architecture: The app is built using Angular's component-based architecture.
+Responsive Design: The UI is designed to be responsive and user-friendly.
+Error Handling: The application gracefully handles errors and provides feedback to users.
+Geolocation: Utilizes the browser's geolocation API to fetch the user's current location and display the weather data accordingly.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+##Known Issues or Limitations -->
+Geolocation Permission: If the user denies geolocation permission, the app cannot fetch the current location weather.
+API Limitations: The OpenWeather API has rate limits, which may affect the application's ability to fetch data if the limit is exceeded.
+Browser Compatibility: Geolocation might not work in all browsers or might require specific permissions.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+##File Structure ---> 
+weather-app/
+│
+├── src/
+│   ├── app/
+│   │   ├── weather/
+│   │   │   ├── weather.component.html
+│   │   │   ├── weather.component.scss
+│   │   │   ├── weather.component.ts
+│   │   │   ├── weather.service.ts
+│   │   ├── app.component.html
+│   │   ├── app.component.scss
+│   │   ├── app.component.ts
+│   │   ├── app.module.ts
+│   ├── assets/
+│   │   ├── weather-icn/
+│   │       ├── weather-logo.png
+│   ├── index.html
+│   ├── styles.scss
+├── .gitignore
+├── angular.json
+├── package.json
+├── README.md
+├── tsconfig.json
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+##Future Enhancements -->
+Multiple Locations: Ability to display weather information for multiple locations simultaneously.
+Additional Weather Information: Display more detailed weather data such as forecast, sunrise, and sunset times.
+Offline Support: Implement caching to provide offline access to previously fetched weather data.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+##License -->
+This project is licensed under the MIT License.
