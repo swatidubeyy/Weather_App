@@ -21,33 +21,6 @@ Geolocation Permission: If the user denies geolocation permission, the app canno
 API Limitations: The OpenWeather API has rate limits, which may affect the application's ability to fetch data if the limit is exceeded.
 Browser Compatibility: Geolocation might not work in all browsers or might require specific permissions.
 
-
-##File Structure ---> 
-weather-app/
-│
-├── src/
-│   ├── app/
-│   │   ├── weather/
-│   │   │   ├── weather.component.html
-│   │   │   ├── weather.component.scss
-│   │   │   ├── weather.component.ts
-│   │   │   ├── weather.service.ts
-│   │   ├── app.component.html
-│   │   ├── app.component.scss
-│   │   ├── app.component.ts
-│   │   ├── app.module.ts
-│   ├── assets/
-│   │   ├── weather-icn/
-│   │       ├── weather-logo.png
-│   ├── index.html
-│   ├── styles.scss
-├── .gitignore
-├── angular.json
-├── package.json
-├── README.md
-├── tsconfig.json
-
-
 ##Future Enhancements -->
 Multiple Locations: Ability to display weather information for multiple locations simultaneously.
 Additional Weather Information: Display more detailed weather data such as forecast, sunrise, and sunset times.
