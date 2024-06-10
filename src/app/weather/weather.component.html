@@ -1,0 +1,40 @@
+<div [ngClass]="{'dark-mode': darkMode}" style="height: 100vh;">
+    <div
+        style="padding: 6px 0;gap: 10px; background-color: #7e1fff; box-shadow: 0 0 10px #0000001a; height: 30px; width: 100%;display: flex; justify-content: center; align-items: center;">
+        <img height="20px" width="20px" src="assets/weather-icn/weather-logo.png" />
+        <span
+            style="color: #fefbff; font-size: 18px; font-weight: 800; line-height: 39px; overflow: hidden; text-decoration: none;">
+            Weather app
+        </span>
+    </div>
+    <div style="position: relative; top: 35px;">
+        <div class="container">
+            <span
+                style="font-size: 20px; font-weight: 800; line-height: 39px; overflow: hidden; text-decoration: none;">Search
+                the Location</span>
+            <div class="form-group" style="display: flex; justify-content: center; align-items: center; gap: 5px;">
+                <input type="text" [(ngModel)]="location" class="form-control" placeholder="Enter city or zip code">
+                <button (click)="getWeather()" class="btn btn-primary">Search</button>
+            </div>
+            <label class="switch">
+                <input type="checkbox" (change)="toggleDarkMode()" [checked]="darkMode">
+                <span class="slider round"></span>
+            </label>
+            <div
+                style="height: 275px; width: 100%; background-color: #9e7ad0; border-radius: 5px; font-size: 20px; box-shadow: 0 2px 4px -1px #0003, 0 4px 5px #00000024, 0 1px 10px #0000001f; padding: 5px; line-height: 1;z-index: 1;">
+                <div *ngIf="weatherData" class="mt-1">
+                    <h2>Weather in {{ weatherData.name }}</h2>
+                    <p>Current Location: {{currentLocation}}</p>
+                    <p>Temperature: {{ weatherData.main.temp }} °C</p>
+                    <p>Date and Time: {{ currentDateTime }}</p>
+                    <p>Humidity: {{ weatherData.main.humidity }}%</p>
+                    <p>Wind Speed: {{ weatherData.wind.speed }} m/s</p>
+                    <p>Weather Description: {{ weatherData.weather[0].description }}</p>
+                </div>
+            </div>
+            <div *ngIf="errorMessage" class="alert alert-danger mt-4">
+                {{ errorMessage }}
+            </div>
+        </div>
+    </div>
+</div>

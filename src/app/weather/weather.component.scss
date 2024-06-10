@@ -1,0 +1,78 @@
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 75px;
+    height: 21px;
+    margin-top: 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 17px;
+    /* Adjusted height */
+    width: 17px;
+    /* Adjusted width */
+    top: 1.5px;
+    /* Adjusted top position */
+    left: 4px;
+    background-color: yellow;
+    /* Sun color */
+    transition: .4s;
+    border-radius: 50%;
+    /* Sun shape */
+    box-shadow: 0 0 10px 2px yellow;
+    /* Sun glow */
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+    /* Move to the right */
+    background-color: transparent;
+    /* Change to moon color */
+    box-shadow: inset 12px 0 0 0 #121212,
+        /* Create main crescent effect */
+        inset -5px 0 0 5px transparent;
+    /* Bend the moon more */
+    transform: translateX(50px) rotate(-25deg);
+    /* Adjust position and tilt when toggled */
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.alert {
+    max-width: 600px;
+    margin: auto;
+}
